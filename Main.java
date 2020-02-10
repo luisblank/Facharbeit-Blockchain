@@ -51,7 +51,7 @@ public class Main {
 		countryBlockchain.checkHashChain();
 		
 		//Counts all the blocks
-		countryBlockchain.countBlocks()
+		countryBlockchain.countBlocks();
 		
 		
 	}
