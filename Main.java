@@ -1,4 +1,3 @@
-
 public class Main {
 
 	private static String [] countries = new String[]{"Afghanistan", "Albania", "Algeria", "American Samoa", "Andorra", "Angola", "Anguilla",
@@ -37,13 +36,23 @@ public class Main {
 	
 	
 	public static void main(String[] args) {
-		Blockchain blocky = new Blockchain(); 
 		
+		Blockchain countryBlockchain = new Blockchain(); 
+		
+		//Adding a Block to the Blockchain with every Countryname as data
 		for(int i = 0; i < countries.length; i++) {
-			blocky.createBlock(countries[i]);
+			countryBlockchain.createBlock(countries[i]);
 		}
-		blocky.showWholeBlockchian();
+		
+		//Shows whole Blockchain
+		countryBlockchain.showWholeBlockchian();
+		
+		//Checks that previousHash and Hash of the previous Block match
+		countryBlockchain.checkHashChain();
+		
+		//Counts all the blocks
+		countryBlockchain.countBlocks()
+		
 		
 	}
-
 }
